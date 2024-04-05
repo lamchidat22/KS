@@ -9,7 +9,7 @@
     </div>
     <div class="mb-3">
         <div class="mb-3">
-            <label class="control-label">{{ __('Is Featured ?') }}</label>
+            <label class="control-label">{{ __('Tin nổi bật') }}</label>
             <x-select name="is_featured" :required="true">
                 <x-option value="" :title="__('Chọn')" />
                 @foreach ($feature as $key => $value)
@@ -21,9 +21,9 @@
     <!-- Role -->
     <div class="mb-3">
         <div class="mb-3">
-            <label class="control-label">{{ __('Status') }}:</label>
+            <label class="control-label">{{ __('Trạng thái') }}:</label>
             <x-select name="status" :required="true">
-                <x-option value="" :title="__('Chọn status')" />
+                <x-option value="" :title="__('Chọn Trạng Thái')" />
                 @foreach ($status as $key => $value)
                     <x-option :value="$key" :title="__($value)" />
                 @endforeach

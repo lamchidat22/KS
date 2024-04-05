@@ -28,7 +28,7 @@
                 <div class="mb-3">
                     <label class="control-label">{{ __('Status') }}:</label>
                     <x-select name="status" :required="true">
-                        <x-option value="" :title="__('Chọn status')" />
+                        <x-option value="" :title="__('Chọn trạng thái')" />
                         @foreach ($status as $key => $value)
                             <x-option :value="$key" :title="__($value)" />
                         @endforeach

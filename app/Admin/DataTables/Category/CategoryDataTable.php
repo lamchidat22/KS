@@ -106,41 +106,13 @@ class CategoryDataTable extends BaseDataTable
     }
 
 
-    // protected function filterColumnGender(){
-    //     $this->instanceDataTable = $this->instanceDataTable
-    //     ->filterColumn('gender', function($query, $keyword) {
-    //         $query->where('gender', $keyword);
-    //     });
-    // }
-    // protected function filterColumnVip(){
-    //     $this->instanceDataTable = $this->instanceDataTable
-    //     ->filterColumn('vip', function($query, $keyword) {
-    //         $query->where('vip', $keyword);
-    //     });
-    // }
-    // protected function filterColumnCreatedAt(){
-    //     $this->instanceDataTable = $this->instanceDataTable->filterColumn('created_at', function($query, $keyword) {
-
-    //         $query->whereDate('created_at', date('Y-m-d', strtotime($keyword)));
-
-    //     });
-    // }
-    // protected function editColumnId(){
-    //     $this->instanceDataTable = $this->instanceDataTable->editColumn('id', $this->view['editlink']);
-    // }
-    // protected function editColumnTitle(){
-    //     $this->instanceDataTable = $this->instanceDataTable->editColumn('title', $this->view['editlink']);
-    // }
-
     protected function editColumnStatus()
     {
         $this->instanceDataTable = $this->instanceDataTable->editColumn('status', function ($post) {
             return $post->status->description();
         });
     }
-    // protected function editColumnSlug(){
-    //     $this->instanceDataTable = $this->instanceDataTable->editColumn('slug', $this->view['editlink']);
-    // }
+
     public function editColumnPostedAt()
     {
         $this->instanceDataTable = $this->instanceDataTable->editColumn('posted_at', '{{ date("d-m-Y", strtotime($created_at)) }}');
